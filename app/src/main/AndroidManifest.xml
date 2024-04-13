@@ -13,18 +13,21 @@
         android:theme="@style/Theme.App_Calculo_Gasto_Combustível"
         tools:targetApi="31">
         <activity
-            android:name=".d_distancia"
+            android:name="e_result"
             android:exported="false" />
         <activity
-            android:name=".c_tela_consumo_carro"
+            android:name="d_distancia"
             android:exported="false" />
         <activity
-            android:name=".b_tela_preco_combustivel"
+            android:name="c_tela_consumo_carro"
+            android:exported="false" />
+        <activity
+            android:name="b_tela_preco_combustivel"
             android:exported="false"
             android:label="@string/title_activity_tela_preco_combustivel"
             android:theme="@style/Theme.App_Calculo_Gasto_Combustível" />
         <activity
-            android:name=".a_tela_Inicial"
+            android:name="a_tela_Inicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

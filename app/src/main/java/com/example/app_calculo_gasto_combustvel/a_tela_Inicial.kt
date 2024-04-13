@@ -13,9 +13,10 @@ class a_tela_Inicial : AppCompatActivity() {
         val btn_Iniciar = findViewById<Button>(R.id.btn_Iniciar)
 
         btn_Iniciar.setOnClickListener {
-            val Intent = Intent (this, b_tela_preco_combustivel::class.java)
-            startActivity(Intent)
-        }
 
+            val intent = Intent (this, b_tela_preco_combustivel::class.java)
+            startActivity(intent)
+
+        }
     }
 }

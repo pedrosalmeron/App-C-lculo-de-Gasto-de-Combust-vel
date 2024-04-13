@@ -10,7 +10,7 @@
         android:id="@+id/tv_Consumo_Carro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Consumo do Carro"
+        android:text="Consumo do Carro (Km/Litro)"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,17 +37,20 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="25dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_passo_2_de_3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textinput_consumo_carro"
+            android:id="@+id/ti_consumo_carro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ex: 10 km/l"
             tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="517dp" />
+            tools:layout_editor_absoluteY="517dp"
+            android:inputType="numberDecimal"
+            android:maxLength="4"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
