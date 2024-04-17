@@ -4,21 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/NavyBlue"
     tools:context=".b_tela_preco_combustivel">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Inicial_header"
+        android:layout_width="match_parent"
+        android:layout_height="330sp"
+        android:background="@drawable/header1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Preço_Combustível"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_arrow_back1"
+            android:contentDescription="Voltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:src="@drawable/arrow_back"
+            android:backgroundTint="@android:color/transparent"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200sp"
+            android:layout_marginEnd="52dp"
+            android:src="@drawable/pump_vf"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.876" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tv_Preço_Combustível"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Preço do Combustível"
+        android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.585" />
+        app:layout_constraintVertical_bias="0.596" />
+
 
     <TextView
         android:id="@+id/tv_passo_1_de_3"
@@ -26,17 +68,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Passo 1 de 3"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Preço_Combustível" />
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="25dp"
+        android:background="#30FFFFFF"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_passo_1_de_3">
@@ -46,6 +90,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ex: 2,50"
+            android:inputType="numberDecimal"
+            android:maxLength="4"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="517dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -54,7 +102,7 @@
         android:id="@+id/btn_Próximo1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="25dp"
         android:text="Próximo"
         app:layout_constraintBottom_toBottomOf="parent"
