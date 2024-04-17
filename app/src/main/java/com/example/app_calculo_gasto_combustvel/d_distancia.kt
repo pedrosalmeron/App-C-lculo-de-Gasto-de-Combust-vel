@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
@@ -12,9 +13,16 @@ class d_distancia : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_distancia)
 
+        val btn_arrow_back3 = findViewById<FloatingActionButton>(R.id.btn_arrow_back3)
         val ti_distância = findViewById<TextInputEditText>(R.id.ti_distância)
-
         val btn_Resultado = findViewById<Button>(R.id.btn_Resultado)
+
+        btn_arrow_back3.setOnClickListener {
+
+            val intentBack1 = Intent(this, c_tela_consumo_carro::class.java)
+
+            startActivity(intentBack1)
+        }
 
         btn_Resultado.setOnClickListener {
 
