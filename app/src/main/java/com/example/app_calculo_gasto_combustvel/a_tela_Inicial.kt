@@ -16,7 +16,6 @@ class a_tela_Inicial : AppCompatActivity() {
 
             val intent = Intent (this, b_tela_preco_combustivel::class.java)
             startActivity(intent)
-
         }
     }
 }

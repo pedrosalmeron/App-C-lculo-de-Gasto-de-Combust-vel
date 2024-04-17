@@ -1,60 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    android:background="@color/NavyBlue"
     tools:context=".e_result">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vg_header2"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:background="@drawable/header2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_Você_Vai_Gastar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="152dp"
+            android:text="Você vai gastar:"
+            android:textColor="@color/NavyBlue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_resultado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.491" />
+
+        <TextView
+            android:id="@+id/tv_resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:gravity="center_horizontal"
+            android:maxLength="12"
+            android:textColor="@color/NavyBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="R$ 153,00" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/tv_resultado"
+        android:id="@+id/tv_Revisão"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:text="R$ 153,00"
-        android:textSize="30dp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:text="Revisão dos dados inseridos"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vg_header2" />
 
     <TextView
-        android:id="@+id/tv_Revisão_Dados_Inseridos"
+        android:id="@+id/tv_preço1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="Revisão dos dados inseridos:" />
+        android:layout_marginBottom="44dp"
+        android:text="Preço:"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_consumo1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_preço"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_preço2"
+        android:layout_width="150sp"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="TextView"
-        tools:text="Preço: "/>
+        android:layout_marginBottom="44dp"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_consumo2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_preço1"
+        tools:text="R$ 500,65" />
 
     <TextView
-        android:id="@+id/tv_consumo"
+        android:id="@+id/tv_consumo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="TextView"
-        tools:text="Consumo:  "/>
+        android:layout_marginBottom="56dp"
+        android:text="Consumo:"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_distancia1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_distancia"
+        android:id="@+id/tv_distancia1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:text="Distância:  "/>
+        android:layout_marginBottom="32dp"
+        android:text="Distância:"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_consumo2"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_distancia2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_consumo1"
+        tools:text="10 Km/L" />
+
+    <TextView
+        android:id="@+id/tv_distancia2"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_distancia1"
+        tools:text="235,00 Km" />
 
     <Button
         android:id="@+id/btn_Novo_Cálculo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginHorizontal="10dp"
-        android:text="Novo Cálculo" />
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="25dp"
+        android:text="Novo Cálculo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="67dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
