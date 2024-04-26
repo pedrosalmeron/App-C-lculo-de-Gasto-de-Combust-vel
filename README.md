@@ -22,7 +22,7 @@ Este projeto é um aplicativo nativo Android desenvolvido com a linguagem de pro
   - TextView
   - EditText
   - Button
-- FloatingActionButton
+  - FloatingActionButton
 
 ## License
 ```
